@@ -1,7 +1,8 @@
 const { test } = require('tests');
 
 test(({ query, expect }) => {
-  const links = document.querySelectorAll('span');
+  const flexContainer = document.querySelectorAll('.qa');
 
-  expect(links).to.be.length(2);
+  const style = getComputedStyle(flexContainer);
+  expect(style).to.have.property('display', 'flex');
 });
