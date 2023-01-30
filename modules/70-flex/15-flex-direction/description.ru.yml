@@ -51,8 +51,6 @@ instructions: |
   ```html
   <style>
     .qa {
-      display: flex;
-
       font: 18px/1.5 sans-serif;
     }
 
