@@ -10,6 +10,6 @@ test(({ query, expect }) => {
   const flexArrow = query(document, '.arrow');
 
   const styleArrow = getComputedStyle(flexArrow);
-  expect(style).to.have.property('flex-grow', '1');
-  expect(style).to.have.property('text-align', 'center');
+  expect(styleArrow).to.have.property('flex-grow', '1');
+  expect(styleArrow).to.have.property('text-align', 'center');
 });
