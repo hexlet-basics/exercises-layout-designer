@@ -66,6 +66,7 @@ instructions: |
   <style>
   .qa {
     font: 18px/1.5 sans-serif;
+    display: flex;
   }
 
   .question {
