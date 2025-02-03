@@ -30,8 +30,8 @@ compose-schema-validate:
 	docker compose run exercises make schema-validate
 
 ci-check:
-	docker compose --file docker compose.yml build
-	docker compose --file docker compose.yml up --abort-on-container-exit
+	docker compose --file docker-compose.yml build
+	docker compose --file docker-compose.yml up --abort-on-container-exit
 
 find-todo:
 	git grep TODO
