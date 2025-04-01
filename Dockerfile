@@ -2,12 +2,12 @@ FROM hexletbasics/base-image
 
 WORKDIR /exercises-layout-designer
 
-RUN npm i -g htmlhint
-RUN npm i -g jsdom jsdom-global
-RUN npm i -g chai chai-dom
-RUN npm i -g @testing-library/dom
-RUN npm i -g @github/query-selector
+ENV PATH=$PATH:/exercises-layout-designer/node_modules/.bin
+
+COPY package.json package-lock.json .
+
+RUN npm ci
 
 COPY . .
 
-ENV NODE_PATH /usr/lib/node_modules:/exercises-layout-designer/src
+ENV NODE_PATH=/usr/lib/node_modules:/exercises-layout-designer/src
